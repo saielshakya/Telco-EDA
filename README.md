@@ -17,12 +17,6 @@ Overall churn is **26.5%**, representing about **$139K of $456K** total monthly 
 
 > These are correlations, not causal claims. For example, customers who buy add-ons may simply be more engaged to begin with.
 
-### Selected Charts
-
-![Churn by contract](eda_output/01_contract.png)
-![Churn by tenure month](eda_output/06_tenure_curve.png)
-![Churn by add-on services](eda_output/05_addons.png)
-
 ## Business Recommendations
 
 1. **Push contract upgrades.** Incentivize month-to-month customers to move to one- or two-year terms, especially fiber customers.
