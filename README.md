@@ -41,36 +41,7 @@ Overall churn is **26.5%**, representing about **$139K of $456K** total monthly 
 └── README.md
 ```
 
-## How to Run
 
-```bash
-pip install pandas numpy matplotlib
-python telco_churn_eda.py
-```
-
-The script prints summary tables to the console and saves charts to `eda_output/`. If the CSV is missing, it downloads it automatically.
-
-## Approach
-
-1. **Load:** the CSV goes into an in-memory SQLite database. `TotalCharges` blanks (new customers with 0 tenure) are set to 0.
-2. **Query:** SQL computes overall KPIs, churn by segment (contract, internet service, payment method, demographics), tenure buckets, add-on counts, risk segments by MRR lost, and LTV by contract.
-3. **Visualize:** bar charts, a churn-by-tenure curve, a charges distribution, and a feature-correlation chart.
-
-### SQL Techniques Used
-Aggregations with `CASE WHEN`, CTEs, derived buckets, multi-column `GROUP BY`, and ratio metrics.
-
-## Limitations
-
-- **No calendar dates.** The data has tenure in months but no signup or cancel dates, so MRR-over-time and cohort analysis aren't possible.
-- **Snapshot data.** Each customer appears once, so month-over-month churn trends can't be measured.
-- **LTV is approximate.** It uses ARPU x (1 / observed monthly churn), with lifetime capped at 60 months because low-churn contracts are right-censored.
-- **Correlation, not causation.**
-
-## Possible Next Steps
-
-- Churn prediction model (logistic regression / gradient boosting) with feature importance
-- Kaplan-Meier survival curves by contract and internet service
-- Interactive dashboard (Streamlit, Tableau, or Power BI)
 
 ## Data Source
 
@@ -78,4 +49,4 @@ Aggregations with `CASE WHEN`, CTEs, derived buckets, multi-column `GROUP BY`, a
 
 ## Author
 
-**[Your Name]** | Data Analyst | [LinkedIn](https://linkedin.com/in/your-profile) | [Email](mailto:you@example.com)
+**[Saiel Shakya]** | Data Analyst | [LinkedIn](https://www.linkedin.com/in/saiel-shakya-842a10228/) | [Email](saielshakya@gmail.com)
